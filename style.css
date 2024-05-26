@@ -1,0 +1,241 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    background-color: #f9fff4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    width: 90%;
+}
+
+/* Button styling */
+.btn {
+    background-color: #47e76cdd; /* Green button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #2ed051; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2ed051; /* Green heading */
+    animation: slideIn 1s forwards;
+}
+
+/* Search bar styling */
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #2ed051;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+/* Folder styling */
+.folder {
+    background-color: #ffba51be; /* Orange background */
+    color: #fff; /* White text */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.folder:hover {
+    background-color: #ffa333; /* Darker orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Mentor container specific styling */
+#mentorContainer select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 5px;
+    background-color: #e8f5e9; /* Light green background */
+    color: #2e7d32; /* Dark green text */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#mentorContainer select:focus {
+    border-color: #2ed051;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+#mentorContainer textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 5px;
+    background-color: #ffecb3; /* Light orange background */
+    color: #534539;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#mentorContainer textarea:focus {
+    border-color: #ffa333;
+    box-shadow: 0 0 5px rgba(255, 163, 51, 0.5);
+}
+
+#mentorContainer ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mentorContainer li {
+    background-color: #e0e0e0; /* Light grey */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Form styling */
+#studentRegistrationForm input,
+#mentorRegistrationForm input,
+#mentorRegistrationForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 5px;
+    background-color: #e8f5e9; /* Light green background */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#studentRegistrationForm input:focus,
+#mentorRegistrationForm input:focus,
+#mentorRegistrationForm select:focus {
+    border-color: #2ed051;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+#studentRegistrationForm button,
+#mentorRegistrationForm button {
+    background-color: #47e76cdd; /* Green button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#studentRegistrationForm button:hover,
+#mentorRegistrationForm button:hover {
+    background-color: #2ed051; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+#studentRegistrationForm,
+#mentorRegistrationForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* User info styling */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-info #userName {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #2e7d32; /* Dark green text */
+}
+
+.user-info .user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#mentorContainer .startchat {
+    background-color: #c8e6c9; /* Light green background */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #65bb68d8; /* Light green border */
+}
+
+#mentorContainer .startchat button {
+    background-color: #78c978b0; /* Green button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#mentorContainer .startchat button:hover {
+    background-color: #4dbe53; /* Darker green on hover */
+}

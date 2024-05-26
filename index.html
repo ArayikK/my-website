@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="registrationContainer">
+        <h1>Գրանցում</h1>
+        <button class="btn" id="studentRegisterButton">Գրանցվել որպես աշակերտ</button>
+        <button class="btn" id="mentorRegisterButton">Գրանցվել որպես մենթոր</button>
+    </div>
+
+    <!-- Student Registration Form -->
+    <div class="container" id="studentRegistrationForm" style="display: none;">
+        <h1>Աշակերտի Գրանցում</h1>
+        <form id="studentForm">
+            <input type="text" id="studentName" placeholder="Անուն" required>
+            <input type="text" id="studentSurname" placeholder="Ազգանուն" required>
+            <input type="number" id="studentAge" placeholder="Տարիք" required>
+            <button type="submit" class="btn">Հաստատել</button>
+        </form>
+        <button class="btn" id="backToRegistrationButtonFromStudent">Վերադառնալ</button>
+    </div>
+
+    <!-- Mentor Registration Form -->
+    <div class="container" id="mentorRegistrationForm" style="display: none;">
+        <h1>Մենթորի Գրանցում</h1>
+        <form id="mentorForm">
+            <input type="text" id="name" placeholder="Անուն" required>
+            <input type="text" id="surname" placeholder="Ազգանուն" required>
+            <input type="email" id="email" placeholder="Էլ․ հասցե" required>
+            <label for="volunteer">Կամավոր եք?</label>
+            <input type="checkbox" id="volunteer">
+            <input type="password" id="password" placeholder="Գաղտնաբառ" required>
+            <div class="choose"><label class="chooselabel" for="sphere">Ոլորտը</label></div>
+            <select id="sphere" required>
+                <option value="math">Մաթեմատիկա</option>
+                <option value="media">Մեդիագրագիտություն</option>
+                <option value="physics">Ֆիզիկա</option>
+                <option value="informatics">Ինֆորմատիկա</option>
+                <option value="english">Անգլերեն</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button type="submit" class="btn">Հաստատել</button>
+        </form>
+        <button class="btn" id="backToRegistrationButtonFromMentor">Վերադառնալ</button>
+    </div>
+    
+    <div class="container" id="mainContainer" style="display: none;">
+        <div class="user-info">
+            <span id="userName"></span>
+            <img src="Usericon.png" alt="User Icon" class="user-icon">
+        </div>
+        <h1>Կրթական Հավելված</h1>
+        <button class="btn" id="booksButton">Գրքեր</button>
+        <button class="btn" id="mentorButton">Կապ մենթորի հետ</button>
+    </div>
+    
+    <div class="container" id="booksContainer" style="display: none;">
+        <input type="text" id="searchBar" placeholder="Որոնել տեղեկություն..." class="search-bar">
+        <h1>Գրքեր</h1>
+        <div class="library">
+            <div class="folder">Մեդիագրագիտություն</div>
+            <div class="folder">Մաթեմատիկա</div>
+            <div class="folder">Ինֆորմատիկա</div>
+            <div class="folder">Ֆիզիկա</div>
+            <div class="folder">այլ</div>
+        </div>
+        <button class="btn" id="backButton">Վերադառնալ</button>
+    </div>
+    
+    <div class="container" id="mentorContainer" style="display: none;">
+        <div id="select-area">
+            <div class="choose"><label class="chooselabel" for="area-select">ընտրել ոլորտը</label></div>
+            <div class="sphere">
+                <select id="area-select">
+                    <option value="math">Մաթեմատիկա</option>
+                    <option value="media">Մեդիագրագիտություն</option>
+                    <option value="physics">Ֆիզիկա</option>
+                    <option value="informatics">Ինֆորմատիկա</option>
+                    <option value="englishb">Անգլերեն</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        </div>
+        
+        <div id="questions">
+            <ul id="question-list"></ul>
+            <div class="information">
+                <textarea id="question-input" placeholder="կարող եք այստեղ ավելացնել հավելյալ տեղեկություն հարցման վերաբերյալ..."></textarea>
+            </div>
+            <div class="startchat">
+                <button id="start-chat-btn" onclick="startChat()">հաստատել</button>
+            </div>
+            <video id="local-video" autoplay muted></video>
+            <video id="remote-video" autoplay></video>
+        </div>
+
+        <div mentorback><button class="btn" id="backToMainButton">Վերադառնալ</button></div>
+    </div>
+
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
